@@ -4,7 +4,7 @@ public class Account1 {
     double balance;
     int accNumber;
 
-    public Account1(double balance, int accNumber) {
+    Account1(double balance, int accNumber) {
         if (balance < 0) {
             this.balance = 0;
         }

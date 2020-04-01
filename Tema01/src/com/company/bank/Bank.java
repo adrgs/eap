@@ -41,6 +41,18 @@ public class Bank {
         this.name = name;
     }
 
+    public void showBankInfo() {
+        String s = "";
+        for (int i=0;i<this.accounts.size();i++) {
+            s += this.accounts.get(i).toString();
+            if (i!=this.accounts.size()-1)
+            {
+                s += "\n";
+            }
+        }
+        System.out.println(this.toString() + s);
+    }
+
     @Override
     public String toString()
     {
@@ -49,13 +61,6 @@ public class Bank {
             s+= " Accounts:\n";
         } else {
             s+= " No accounts open";
-        }
-        for (int i=0;i<this.accounts.size();i++) {
-            s += this.accounts.get(i).toString();
-            if (i!=this.accounts.size()-1)
-            {
-                s += "\n";
-            }
         }
         return s;
     }

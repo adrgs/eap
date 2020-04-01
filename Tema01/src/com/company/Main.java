@@ -95,7 +95,7 @@ public class Main {
                     break;
                 case 7:
                     System.out.println("Bank info:");
-                    System.out.println(bank.toString());
+                    bank.showBankInfo();
                     break;
                 case 8:
                     System.exit(0);

@@ -3,7 +3,7 @@ package com.company.bank;
 public class Account2 extends Account1 { // Contul Tranzactii limitate
     private double maxWithdraw;
 
-    public Account2(double balance, int accNumber, double maxWithdraw) {
+    Account2(double balance, int accNumber, double maxWithdraw) {
         super(balance, accNumber);
         this.setMaxWithdraw(maxWithdraw);
     }

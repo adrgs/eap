@@ -3,7 +3,7 @@ package com.company.bank;
 public class Account3 extends Account1 { // Contul "Sa nu ramai pe 0"
     double minBalance;
 
-    public Account3(double balance, int accNumber, double minBalance) {
+    Account3(double balance, int accNumber, double minBalance) {
         super(balance, accNumber);
         this.setMinBalance(minBalance);
     }
