@@ -7,23 +7,21 @@ public class Bank {
     private String name;
     List<Account1> accounts;
 
-    public enum ACCOUNT_TYPE {NORMAL_ACCOUNT, LIMITED_TRANSACTIONS_ACCOUNT, SAVINGS_ACCOUNT};
-
     public Bank(String name) {
         this.setName(name);
         this.accounts = new ArrayList<>();
     }
 
-    public void createAccount(ACCOUNT_TYPE accountType, double balance) {
-        if (accountType == ACCOUNT_TYPE.NORMAL_ACCOUNT) {
+    public void createAccount(AccountType accountType, double balance) {
+        if (accountType == AccountType.NORMAL_ACCOUNT) {
             this.accounts.add(new Account1(balance, this.accounts.size()));
         }
     }
 
-    public void createAccount(ACCOUNT_TYPE accountType, double balance, double limit) {
-        if (accountType == ACCOUNT_TYPE.LIMITED_TRANSACTIONS_ACCOUNT) {
+    public void createAccount(AccountType accountType, double balance, double limit) {
+        if (accountType == AccountType.LIMITED_TRANSACTIONS_ACCOUNT) {
             this.accounts.add(new Account2(balance, this.accounts.size(), limit));
-        } else if (accountType == ACCOUNT_TYPE.SAVINGS_ACCOUNT) {
+        } else if (accountType == AccountType.SAVINGS_ACCOUNT) {
             this.accounts.add(new Account3(balance, this.accounts.size(), limit));
         }
     }

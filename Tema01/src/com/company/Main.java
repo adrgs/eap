@@ -34,7 +34,7 @@ public class Main {
                 case 1:
                     System.out.println("Enter the account starting balance:");
                     balance = scan.nextDouble();
-                    bank.createAccount(Bank.ACCOUNT_TYPE.NORMAL_ACCOUNT, balance);
+                    bank.createAccount(AccountType.NORMAL_ACCOUNT, balance);
                     System.out.println("Normal account created:");
                     break;
                 case 2:
@@ -42,7 +42,7 @@ public class Main {
                     balance = scan.nextDouble();
                     System.out.println("Enter the account transaction limit:");
                     limit = scan.nextDouble();
-                    bank.createAccount(Bank.ACCOUNT_TYPE.LIMITED_TRANSACTIONS_ACCOUNT, balance, limit);
+                    bank.createAccount(AccountType.LIMITED_TRANSACTIONS_ACCOUNT, balance, limit);
                     System.out.println("Limited transactions account created:");
                     break;
                 case 3:
@@ -50,7 +50,7 @@ public class Main {
                     balance = scan.nextDouble();
                     System.out.println("Enter the account minimum balance limit:");
                     limit = scan.nextDouble();
-                    bank.createAccount(Bank.ACCOUNT_TYPE.SAVINGS_ACCOUNT, balance, limit);
+                    bank.createAccount(AccountType.SAVINGS_ACCOUNT, balance, limit);
                     System.out.println("Savings account created:");
                     break;
                 case 4:
