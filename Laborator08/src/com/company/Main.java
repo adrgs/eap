@@ -89,20 +89,22 @@ public class Main {
 //            e.printStackTrace();
 //        }
 
-        try(ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream("serializare.txt"))) {
-            Student student = (Student) objectInputStream.readObject();
+//        try(ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream("serializare.txt"))) {
+//            Student student = (Student) objectInputStream.readObject();
+//
+//            if (student != null) {
+//                System.out.println(student);
+//            }
+//
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        } catch (ClassNotFoundException e) {
+//            e.printStackTrace();
+//        }
 
-            if (student != null) {
-                System.out.println(student);
-            }
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }
 
     }
 }
