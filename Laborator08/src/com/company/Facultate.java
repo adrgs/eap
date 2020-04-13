@@ -53,7 +53,7 @@ public class Facultate {
     }
 
     public static List<Facultate> findByOras(String oras, Statement statement) throws SQLException {
-        String sql = "SELECT * FROM facultati WHERE oras LIKE '" + oras + "'";
+        String sql = "SELECT * FROM laborator.facultati WHERE oras LIKE '" + oras + "'";
 
         List<Facultate> facultati = new ArrayList<>();
 

@@ -2,6 +2,7 @@ package com.company;
 
 
 import java.sql.*;
+import java.util.List;
 
 public class LaboratorDB {
 
@@ -40,8 +41,12 @@ public class LaboratorDB {
             //Facultate.save(facultate, connection);
 
             //Cautare dupa ID
-            Facultate facultate = Facultate.findById(5, statement);
-            System.out.println(facultate);
+            //Facultate facultate = Facultate.findById(5, statement);
+            //System.out.println(facultate);
+
+            //Cautare dupa Oras
+            List<Facultate> facultateList = Facultate.findByOras("Timisoara", statement);
+            System.out.println(facultateList);
 
             System.out.println("Closing connection...");
             connection.close();
