@@ -1,6 +1,8 @@
 package com.company;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Facultate {
     private int id;
@@ -48,5 +50,23 @@ public class Facultate {
             return facultate;
         }
         return null;
+    }
+
+    public static List<Facultate> findByOras(String oras, Statement statement) throws SQLException {
+        String sql = "SELECT * FROM facultati WHERE oras LIKE '" + oras + "'";
+
+        List<Facultate> facultati = new ArrayList<>();
+
+        ResultSet resultSet = statement.executeQuery(sql);
+        while (resultSet.next()) {
+            Facultate facultate = new Facultate(
+                    resultSet.getInt("id"),
+                    resultSet.getString("nume"),
+                    resultSet.getString("oras")
+            );
+            facultati.add(facultate);
+        }
+
+        return facultati;
     }
 }

@@ -16,6 +16,7 @@ public class LaboratorDB {
     {
         try {
             Class.forName(JDBC_DRIVER);
+            System.out.println("Connectiong to database...");
             Connection connection = DriverManager.getConnection(DB_URL,USER, PASS);
             Statement statement = connection.createStatement();
 
@@ -38,8 +39,11 @@ public class LaboratorDB {
             //Facultate facultate = new Facultate("ASE", "Bucuresti");
             //Facultate.save(facultate, connection);
 
-            
+            //Cautare dupa ID
+            Facultate facultate = Facultate.findById(5, statement);
+            System.out.println(facultate);
 
+            System.out.println("Closing connection...");
             connection.close();
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
