@@ -35,10 +35,10 @@ public class LaboratorDB {
             //}
 
             //Inserare obiecte in DB
+            //Facultate facultate = new Facultate("ASE", "Bucuresti");
+            //Facultate.save(facultate, connection);
 
-            Facultate facultate = new Facultate("Facultatea de Geologie", "Bucuresti");
-            Facultate.save(facultate, statement);
-
+            
 
             connection.close();
         } catch (ClassNotFoundException | SQLException e) {
