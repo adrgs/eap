@@ -1,3 +1,6 @@
+import model.Client;
+import repository.GenericRepository;
+
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -11,11 +14,14 @@ public class Main {
             System.out.println("Database initialization failed");
             e.printStackTrace();
         }
-
         try {
             Connection connection = Database.getConnection();
 
             System.out.println("Database connection successful!");
+
+            Client client = new Client();
+            String selectQuery = GenericRepository.useObject(client).getSelectQuery();
+            System.out.println(selectQuery);
 
             connection.close();
         } catch (SQLException e) {

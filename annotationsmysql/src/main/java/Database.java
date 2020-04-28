@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class Database {
     static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
-    static final String DB_URL = "jdbc:mysql://db.springbike.site:3306";
+    static final String DB_URL = "jdbc:mysql://db.springbike.site:3306/springbike";
     static String USER = null;
     static String PASS = null;
     private Database() { }
