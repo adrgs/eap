@@ -12,5 +12,30 @@
 </head>
 <body>
 
+<h3 align="center">Bun venit pe pagina asta alba si goala!</h3>
+
+<%
+    out.print("Text in java");
+%>
+
+<form align="center" method="post" action="/laborator">
+
+    <label for="name">Name:</label><br/>
+    <input type="text" id="name" name="name"><br/>
+    <input type="submit" value="Button">
+</form>
+
+<p align="center">
+<%
+
+    if (request.getAttribute("mesaj") != null)
+    {
+        String line = (String) request.getAttribute("mesaj");
+        out.print(line);
+    }
+
+%>
+</p>
+
 </body>
 </html>
